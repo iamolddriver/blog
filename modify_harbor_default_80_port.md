@@ -22,7 +22,7 @@ hostname = 192.168.10.10:8081
 #It can be set to https if ssl is enabled on nginx.
 ui_url_protocol = http
 ```
-3、修改```docker-compose.yml```文件映射为8999端口：
+3、修改```docker-compose.yml```文件映射为8081端口：
 
 ```Shell
 
@@ -38,7 +38,7 @@ ui_url_protocol = http
       - ui
       - log
 ```
-4、修改```common/templates/registry/config.yml```文件加入8081端口(**此步修改后会导致public_url:8081:8081, 所以并不需要修改**)：
+4、修改```common/templates/registry/config.yml```文件加入8081端口(**此步修改后会导致public_url:8081:8081 error, 所以并不需要修改**)：
 
 ```Shell
 auth:
